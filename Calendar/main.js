@@ -30,6 +30,13 @@ const renderCalendar = () => {
         let dayEle = document.createElement('span');
         dayEle.className = "inactive";
         dayEle.innerText = (lastDateofLastMonth - i + 1);
+        dayEle.onclick = () => {
+            let activeEle = document.querySelector(".selected");
+            if(activeEle){
+                activeEle.classList.toggle('selected');
+            }
+            dayEle.classList.add('selected');
+        }
         spanList.push(dayEle);
     }
 
@@ -44,6 +51,13 @@ const renderCalendar = () => {
         let dayEle = document.createElement('span');
         dayEle.className = isToday;
         dayEle.innerText = (i);
+        dayEle.onclick = () => {
+            let activeEle = document.querySelector(".selected");
+            if(activeEle){
+                activeEle.classList.toggle('selected');
+            }
+            dayEle.classList.add('selected');
+        }
         spanList.push(dayEle);
     }
      // creating spans of next months suffix days of this current month
@@ -51,6 +65,13 @@ const renderCalendar = () => {
         let dayEle = document.createElement('span');
         dayEle.className = "inactive";
         dayEle.innerText = (i - lastDayofMonth + 1);
+        dayEle.onclick = () => {
+            let activeEle = document.querySelector(".selected");
+            if(activeEle){
+                activeEle.classList.toggle('selected');
+            }
+            dayEle.classList.add('selected');
+        }
         spanList.push(dayEle);
     }
     // Replace Old date text with the newly updated date
