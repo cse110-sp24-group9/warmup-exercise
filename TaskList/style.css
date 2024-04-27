@@ -22,8 +22,9 @@ body {
 }
 
 .tasklist {
-  width: 30%;
-  height: 100%;
+  /* Commented out to make it scale properly */
+  /* width: 30%;
+  height: 100%; */
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -135,17 +136,23 @@ body {
     opacity: 100%;
 }
 
+.checkbox input[type="checkbox"]:checked ~ .task-entry {
+  opacity: 50%;
+}
 
 /* Style the checkmark/indicator */
 .checkbox .checkmark {
   z-index: 0;
   align-self: center;
   justify-self: center;
-  position: absolute;
-  margin: 20%;
+  /* change position to relative */
+  position: relative;
+  margin: auto;
   width: 20%;
   height: 50%;
   border: solid black;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
+
+  
 }
