@@ -79,6 +79,11 @@ body{
     border-radius: 50%;    
     color: rgb(238, 235, 235);
 }
+.selected {
+    background-color: #1B998B;
+    color: wheat;
+    border-radius: 50%;
+}
 
 
 .day_grid > span {
@@ -161,7 +166,6 @@ body{
         width: 2em;
         height: 2em;
     }
-
 }
 
 @media (max-width: 400px) {
@@ -177,5 +181,4 @@ body{
         width: 2em;
         height: 2em;
     }
-
 }
