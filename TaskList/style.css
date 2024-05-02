@@ -41,7 +41,7 @@ body {
     align-items: center;
 }
 
-.header > button {
+#addbtn {
   flex: 10%;
   border-radius: 50%;
   border: none;
@@ -50,12 +50,29 @@ body {
   aspect-ratio: 1 / 1;
 }
 
-.header >button:hover {
+.minusbtn {
+  flex: 10%;
+  border-radius: 50%;
+  border: none;
+  width: 100%;
+  font-size:100%;
+  aspect-ratio: 1 / 1;
+}
+
+#addbtn:hover {
     background-color: lightgray;
 }
 
-.header > button:active{
+.minusbtn:hover {
+  background-color: lightgray;
+}
+
+#addbtn:active {
     background-color: gray;
+}
+
+.minusbtn:active {
+  background-color: gray;
 }
 
 .header > h1 {
@@ -79,7 +96,7 @@ body {
 .task-entry {
   width: 100%;
   display: grid;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 10% 75% 15%;
   grid-template-rows: 100%;
   margin: 2%;
 }
@@ -133,7 +150,7 @@ body {
 
 /* Show the checkmark when checked */
 .checkbox input[type="checkbox"]:checked ~ .checkmark {
-    opacity: 100%;
+  opacity: 100%;
 }
 
 .checkbox input[type="checkbox"]:checked ~ .task-entry {
